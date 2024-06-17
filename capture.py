@@ -64,7 +64,7 @@ def move_until_color(move_step):
 
     while True:
         start_screenshot = take_window_screenshot("AntilatencyService")
-        screenshot_name = f"data/{x_coord}_{y_coord}.png"
+        screenshot_name = f"data/{-x_coord}_{-y_coord}.png"
         start_screenshot.save(screenshot_name)
 
         pyautogui.mouseDown(button='middle')
@@ -77,7 +77,7 @@ def move_until_color(move_step):
 
         if i >= width_zone / step_in_cells:
             start_screenshot = take_window_screenshot("AntilatencyService")
-            screenshot_name = f"data/{x_coord}_{y_coord}.png"
+            screenshot_name = f"data/{-x_coord}_{-y_coord}.png"
             start_screenshot.save(screenshot_name)
             pyautogui.mouseDown(button='middle')
             pyautogui.moveTo(current_x, current_y + y_step)
